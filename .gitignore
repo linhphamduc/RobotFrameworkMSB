@@ -5,3 +5,8 @@
 .idea/RobotFrameworkMSB.iml
 .idea/vcs.xml
 .idea/workspace.xml
+output.xml
+report.html
+*.pyc
+*.png
+log.html
