@@ -4,7 +4,7 @@ Library  SeleniumLibrary
 Resource  Resources/PageObject/KeywordDefinationFiles/Common.robot
 Resource  Resources/PageObject/KeywordDefinationFiles/CJ1/TestCase_MainFlow/Testcase_MainFlow.robot
 Variables  Resources/PageObject/TestData/Testdata.py
-Suite Teardown  Đóng trình duyệt
+#Suite Teardown  Đóng trình duyệt
 
 *** Variables ***
 ${urlMSBVay}  https://upl.uat.df.msb.com.vn/
@@ -58,11 +58,11 @@ TC005
     Chọn 1 sản phẩm (Tiền nhanh or Vay linh hoạt) và Open màn hình chi tiết sản phẩm
     Click button "Tính toán khoản vay"
     Input số tiền, thời gian và mục đích vay
-#    Click button "Chi tiết" ở phương án
-#    Click button "Để lại yêu cầu" bên góc trái màn hình chi tiết khoản vay
-#    Input valid data vào from
-#    Click button "Xác nhận" để tiếp tục
-#    Input valid OTP
+    Click button "Chi tiết" ở phương án
+    Click button "Để lại yêu cầu" bên góc trái màn hình chi tiết khoản vay
+    Input valid data vào from
+    Click button "Xác nhận" để tiếp tục
+    Input valid OTP
 
 TC006
     [Documentation]  KH để lại yêu cầu tư vấn từ MH Chi tiết SP

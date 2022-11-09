@@ -43,7 +43,7 @@ Input valid data vào from
     run keyword and ignore error  click element  ${contactChannel}
 
 Click button "Xác nhận" để tiếp tục
-    run keyword and ignore error  scroll element into view  //a[text()='Mạng lưới MSB']
+    run keyword and ignore error  scroll element into view  //div[text()='Mạng lưới MSB']
     sleep  2s
     wait until element is enabled  ${confirmBtn}
     run keyword and ignore error  click element  ${confirmBtn}
@@ -95,10 +95,13 @@ Input số tiền, thời gian và mục đích vay
     input text  //input[@name = 'desiredLoan']  100000000
     input text  //input[@name = 'loanTime']  12
     wait until element is visible  //div[@name = 'sourceIncome']
+    run keyword and ignore error    scroll element into view    //div[text() ='Điều kiện tham gia và biểu phí chung']
     run keyword and ignore error  click element  //div[@name = 'sourceIncome']
-    run keyword and ignore error  click element  //span[@title = 'Thu nhập từ lương']
-    run keyword and ignore error  click element  //label[text() = 'Lương chuyển khoản qua ngân hàng MSB']
-    run keyword and ignore error  click element  //button[text() = 'Xem phương án']
+    wait until element is visible  //div[@label='Thu nhập từ lương']
+    click element  //div[@label='Thu nhập từ lương']
+    wait until element is visible  //label[text() = 'Lương chuyển khoản qua ngân hàng MSB']
+    click element  //label[text() = 'Lương chuyển khoản qua ngân hàng MSB']
+    click element  //button[@id='product-detail_loan-plan']
     sleep  10s
 
 Click button "Chi tiết" ở phương án
