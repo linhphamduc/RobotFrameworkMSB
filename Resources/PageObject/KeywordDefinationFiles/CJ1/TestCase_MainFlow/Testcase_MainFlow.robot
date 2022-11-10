@@ -1,6 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-Variables  Resources/PageObject/Locators/CJ1/Testcase_MainFlow.py
+Variables  ../Resources/PageObject/Locators/CJ1/Testcase_MainFlow.py
 
 *** Keywords ***
 Open Landing page
