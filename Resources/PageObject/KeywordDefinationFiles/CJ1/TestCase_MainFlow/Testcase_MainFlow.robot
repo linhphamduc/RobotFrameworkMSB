@@ -43,7 +43,7 @@ Input valid data vào from
     run keyword and ignore error  click element  ${contactChannel}
 
 Click button "Xác nhận" để tiếp tục
-    run keyword and ignore error  scroll element into view  //div[text()='Mạng lưới MSB']
+    run keyword and ignore error  scroll element into view  ${confirmBtn}
     sleep  2s
     wait until element is enabled  ${confirmBtn}
     run keyword and ignore error  click element  ${confirmBtn}
@@ -107,6 +107,16 @@ Input số tiền, thời gian và mục đích vay
 Click button "Chi tiết" ở phương án
     run keyword and ignore error  click element  //span[text() = 'Chi tiết']
 
+Click "Đăng ký ngay"
+    run keyword and ignore error  click element  //span[text() = 'Đăng ký ngay']
+
 Click button "Để lại yêu cầu" bên góc trái màn hình chi tiết khoản vay
     wait until element is enabled  ${consultancyBtn}
     click element  ${consultancyBtn}
+
+KH upload ID doc thành công và click "Tiếp tục"
+    wait until element is visible  //button[@class = 'btn-upload']
+    click element  //button[@class = 'btn-upload']
+    run keyword and ignore error    scroll element into view    //div[text() ='Ngân hàng TMCP Hàng Hải Việt Nam']
+    run keyword and ignore error    click element  //input[@name = 'cccdmt']
+#    sleep  10s

@@ -4,10 +4,10 @@ Library  SeleniumLibrary
 Resource  Resources/PageObject/KeywordDefinationFiles/Common.robot
 Resource  Resources/PageObject/KeywordDefinationFiles/CJ1/TestCase_MainFlow/Testcase_MainFlow.robot
 Variables  Resources/PageObject/TestData/Testdata.py
-#Suite Teardown  Đóng trình duyệt
+Suite Teardown  Đóng trình duyệt
 
 *** Variables ***
-${urlMSBVay}  https://upl.uat.df.msb.com.vn/
+${urlMSBVay}  https://upl.dev.df.msb.com.vn/
 ${browser}  Chrome
 
 *** Test Cases ***
@@ -76,3 +76,18 @@ TC006
     Input valid data vào from
     Click button "Xác nhận" để tiếp tục
     Input valid OTP
+
+TC007
+    [Documentation]  Khách hàng tạo hồ sơ vay với nguồn thu nhập từ lương
+    [Tags]  taind11
+    Open Landing page   ${urlMSBVay}  ${browser}
+    Chọn 1 sản phẩm (Tiền nhanh or Vay linh hoạt) và Open màn hình chi tiết sản phẩm
+    Click button "Tính toán khoản vay"
+    Input số tiền, thời gian và mục đích vay
+    Click "Đăng ký ngay"
+    KH upload ID doc thành công và click "Tiếp tục"
+#    KH điền thông tin vào màn hình basic info và click "Tiếp tục"
+#    KH nhập valid OTP và tiếp tục
+#    KH input valid thông tin vào màn hình điền đơn đăng ký và tiếp tục
+#    KH confirm và tiếp tục
+#    KH upload hồ sơ và click "Nộp hồ sơ"
