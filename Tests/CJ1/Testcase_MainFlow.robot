@@ -4,7 +4,7 @@ Library  SeleniumLibrary
 Resource  ../Resources/PageObject/KeywordDefinationFiles/Common.robot
 Resource  ../Resources/PageObject/KeywordDefinationFiles/CJ1/TestCase_MainFlow/Testcase_MainFlow.robot
 Variables  ../Resources/PageObject/TestData/Testdata.py
-Suite Teardown  Đóng trình duyệt
+#Suite Teardown  Đóng trình duyệt
 
 *** Variables ***
 ${urlMSBVay}  https://upl.dev.df.msb.com.vn/
@@ -86,7 +86,7 @@ TC007
     Input số tiền, thời gian và mục đích vay
     Click "Đăng ký ngay"
     KH upload ID doc thành công và click "Tiếp tục"
-    KH điền thông tin vào màn hình basic info và click "Tiếp tục"
+    #KH điền thông tin vào màn hình basic info và click "Tiếp tục"
 #    KH nhập valid OTP và tiếp tục
 #    KH input valid thông tin vào màn hình điền đơn đăng ký và tiếp tục
 #    KH confirm và tiếp tục

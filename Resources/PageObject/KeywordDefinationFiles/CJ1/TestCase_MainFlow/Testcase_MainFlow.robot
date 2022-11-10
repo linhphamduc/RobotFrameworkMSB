@@ -84,7 +84,7 @@ Chọn 1 sản phẩm (Tiền nhanh or Vay linh hoạt) và Open màn hình chi 
     click element  //button[text() = 'Xem gợi ý']
     sleep  5s
     wait until element is visible  //div[4]/div/div[2]/div/div[2]/div/div/a/div/button/span
-    click element  //div[4]/div/div[2]/div/div[2]/div/div/a/div/button/span
+    run keyword and ignore error    click element  //div[4]/div/div[2]/div/div[2]/div/div/a/div/button/span
 
 Click button "Tính toán khoản vay"
     wait until element is visible  //span[text() = 'Tính toán khoản vay']
@@ -117,6 +117,8 @@ Click button "Để lại yêu cầu" bên góc trái màn hình chi tiết kho�
 KH upload ID doc thành công và click "Tiếp tục"
     wait until element is visible  //button[@class = 'btn-upload']
     click element  //button[@class = 'btn-upload']
-    run keyword and ignore error    scroll element into view    //div[text() ='Ngân hàng TMCP Hàng Hải Việt Nam']
-    run keyword and ignore error    click element  //input[@name = 'cccdmt']
+    Wait Until Element Is Enabled    //input[@name='cccdmt']
+    Choose File    //input[@name='cccdmt']    C:/Users/linhpd5/Documents/WIP/Tai auto/RobotFrameworkMSB/results/selenium-screenshot-3.png
+    #run keyword and ignore error    scroll element into view    //div[text() ='Ngân hàng TMCP Hàng Hải Việt Nam']
+    #run keyword and ignore error    click element  //input[@name = 'cccdmt']
 #    sleep  10s
